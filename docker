@@ -1,0 +1,14 @@
+# Use a base image
+FROM openjdk:17-jdk-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy your source code (e.g., Java files) into the container
+COPY src/ /app/src/
+
+# Optionally, if you want to copy everything:
+# COPY . /app/
+
+# Run your app (example for Java application)
+CMD ["java", "-jar", "app.jar"]
