@@ -1,5 +1,6 @@
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY target/appium-java-mobile-automation-demo.jar app.jar
+COPY target/appium-java-mobile-automation-demo-1.0-SNAPSHOT.jar
+.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
