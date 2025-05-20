@@ -18,7 +18,7 @@
         <mockneat.version>0.4.8</mockneat.version>
         <commons.io.version>2.16.1</commons.io.version>
         <extent.report.version>5.1.2</extent.report.version>
-        <lombok.version>1.18.18</lombok.version>
+        <lombok.version>1.18.30</lombok.version>
         <log4j.api.version>2.20.0</log4j.api.version>
         <log4j.core.version>2.20.0</log4j.core.version>
         <smoke.suite.testng.xml>src/test/resources/smoke-suite.xml</smoke.suite.testng.xml>
@@ -142,6 +142,10 @@
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
+                    <compilerArgs>
+                        <arg>--add-exports</arg>
+                        <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+                    </compilerArgs>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
